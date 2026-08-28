@@ -2,6 +2,9 @@
 
 A personal portfolio built with a modern, terminal-inspired aesthetic. This project showcases my skills, experience, and projects as an aspiring Software Development Engineer.
 
+## Live Demo
+🚀 **[View the live portfolio here](https://shoaibkhan-sde.github.io/my-portfolio/)**
+
 ## Technologies Used
 - HTML5 for semantic structure
 - Vanilla CSS with CSS Variables for theme and styling
@@ -25,6 +28,9 @@ npx serve .
 
 ### Option 3: Direct File
 Alternatively, you can just open the `index.html` file directly in your web browser.
+
+## Deployment
+This portfolio is automatically deployed to **GitHub Pages** using **GitHub Actions**. Any changes pushed to the `main` branch trigger a deployment workflow (defined in `.github/workflows/static.yml`) which publishes the static assets directly to the live site.
 
 ## Features
 - **Responsive Design:** Automatically adapts to mobile screens with a collapsible sidebar menu.
