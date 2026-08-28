@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shoaib Khan — SDE Aspirant</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="ambient-glow"></div>
+<div class="ambient-glow-2"></div>
+
+<div class="topbar">
+  <span style="font-family:var(--font-mono); color:var(--accent); font-weight: 600;">shoaib.dev</span>
+  <button id="menuToggle" aria-label="Toggle navigation">☰ Menu</button>
+</div>
+
+<div class="shell">
+  <nav class="sidebar" id="sidebar" aria-label="Section navigation">
+    <div class="sidebar-brand"><span class="dot">●</span> portfolio <span style="color: var(--text-faint)">/</span> main</div>
+    <div class="tree-label">Explorer</div>
+    <a class="tree-item active" data-target="hero" href="#hero"><span class="icon">⌂</span> hero.tsx</a>
+    <a class="tree-item" data-target="expertise" href="#expertise"><span class="icon">◇</span> expertise.json</a>
+    <a class="tree-item" data-target="about" href="#about"><span class="icon">◆</span> about.md</a>
+    <a class="tree-item" data-target="skills" href="#skills"><span class="icon">±</span> skills.diff</a>
+    <a class="tree-item" data-target="projects" href="#projects"><span class="icon">▤</span> projects/</a>
+    <a class="tree-item" data-target="experience" href="#experience"><span class="icon">≣</span> experience.log</a>
+    <a class="tree-item" data-target="contact" href="#contact"><span class="icon">›_</span> contact.sh</a>
+
+    <div class="sidebar-footer">
+      <div class="status-line"><span class="pulse"></span> open to opportunities</div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="terminal">
+        <div class="terminal-bar">
+          <span class="dot-ctrl r"></span><span class="dot-ctrl y"></span><span class="dot-ctrl g"></span>
+          <span class="path">zsh — shoaib@portfolio ~ %</span>
+        </div>
+        <div class="terminal-body">
+          <div class="line"><span class="prompt">$</span> whoami</div>
+          <div class="out-name">Shoaib Khan</div>
+          <div class="out-role">SDE Aspirant — MERN Stack &amp; DSA<span class="caret"></span></div>
+        </div>
+      </div>
+      <p class="hero-sub">3rd-year CSE student building full-stack products with the MERN stack while grinding DSA for interviews. I ship complete projects, not tutorials — and I contribute to open source along the way.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#projects">View projects →</a>
+        <a class="btn btn-ghost" href="#" download>Download résumé ⇩</a>
+        <a class="btn btn-ghost" href="https://github.com/shoaibkhan-sde" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+
+      <div class="pinned">
+        <div class="pinned-label">// pinned</div>
+        <div class="pinned-grid">
+          <a class="pinned-card" href="#projects">
+            <div class="pinned-name">NexusStudy</div>
+            <div class="pinned-desc">One hub replacing 5 scattered student apps</div>
+            <div class="pinned-stack">React · Node.js · MongoDB</div>
+          </a>
+          <a class="pinned-card" href="#projects">
+            <div class="pinned-name">VenueFlow-AI</div>
+            <div class="pinned-desc">Crowd &amp; wait-time coordination for event venues</div>
+            <div class="pinned-stack">JavaScript · AI</div>
+          </a>
+          <a class="pinned-card" href="#projects">
+            <div class="pinned-name">CivicMind-AI</div>
+            <div class="pinned-desc">Conversational guide to the election process</div>
+            <div class="pinned-stack">JavaScript · AI</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="expertise">
+      <div class="eyebrow">expertise.json</div>
+      <h2>Where I focus</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <div class="project-head"><span>dsa/</span><span class="stars">300+ goal</span></div>
+          <div class="project-body">
+            <h3>DSA &amp; Problem Solving</h3>
+            <p>Interview-pattern practice across arrays, graphs, DP, and greedy — building toward 300+ problems solved and consistent contest participation.</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-head"><span>mern/</span><span class="stars">full-stack</span></div>
+          <div class="project-body">
+            <h3>MERN Full-Stack</h3>
+            <p>React on the front, Node/Express on the back, MongoDB for storage — comfortable owning a feature end to end, including REST API design and auth.</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-head"><span>oss/</span><span class="stars">Pull Shark ×2</span></div>
+          <div class="project-body">
+            <h3>Open Source Collaboration</h3>
+            <p>Active contributor with merged pull requests recognized by GitHub's Pull Shark and Pair Extraordinaire badges — comfortable working in someone else's codebase.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="eyebrow">about.md</div>
+      <h2>A little context</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>I'm a Computer Science undergrad who'd rather ship a finished project than half-follow ten tutorials. My builds tend to start from a real annoyance — students juggling five different apps just to keep track of coursework, event organizers struggling with crowd flow — and turn into a working <strong>MERN application</strong>, not just a repo with a README.</p>
+          <p>Alongside that, I spend a steady chunk of time on <strong>DSA and competitive programming</strong>, because I want to walk into an SDE interview solving problems, not memorizing them. I'm also an active open-source contributor — merged PRs across community repos, not just my own.</p>
+          <p>Currently looking for an <strong>SDE internship</strong> where I can learn from a real engineering team and keep building things people actually use.</p>
+        </div>
+        <div class="facts">
+          <div class="fact-row"><span>Education</span><span>B.E. CSE, Padmashri Dr. V.B. Kolte COE</span></div>
+          <div class="fact-row"><span>Year</span><span>3rd Year · Expected 2028</span></div>
+          <div class="fact-row"><span>Focus</span><span>DSA, MERN, System Design basics</span></div>
+          <div class="fact-row"><span>Status</span><span>Open to SDE internships</span></div>
+          <div class="fact-row"><span>Currently learning</span><span>Advanced Git, DB Optimization, OOP Design</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="eyebrow">skills.diff</div>
+      <h2>What I actually work with</h2>
+      <div class="diff">
+        <div class="diff-file">diff --git a/candidate b/shoaib-khan <span>[modified]</span></div>
+
+        <div class="diff-hunk">@@ Languages @@</div>
+        <div class="diff-line add"><span class="marker">+</span><span class="content">C++, Java, Python, JavaScript</span></div>
+
+        <div class="diff-hunk">@@ Frontend @@</div>
+        <div class="diff-line add"><span class="marker">+</span><span class="content">React, HTML, CSS, Markdown</span></div>
+
+        <div class="diff-hunk">@@ Backend &amp; Database @@</div>
+        <div class="diff-line add"><span class="marker">+</span><span class="content">Node.js, Express.js, MongoDB, REST API design</span></div>
+
+        <div class="diff-hunk">@@ Core CS @@</div>
+        <div class="diff-line add"><span class="marker">+</span><span class="content">Data Structures &amp; Algorithms, OOP Design Principles, System Design basics</span></div>
+
+        <div class="diff-hunk">@@ Tools @@</div>
+        <div class="diff-line add"><span class="marker">+</span><span class="content">Git, GitHub, open-source collaboration workflows</span></div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="eyebrow">projects/</div>
+      <h2>Things I've built and shipped</h2>
+      <div class="project-grid">
+
+        <div class="project-card">
+          <div class="project-head"><span>NexusStudy</span><span class="stars">★ 1</span></div>
+          <div class="project-body">
+            <h3>NexusStudy</h3>
+            <p>Students juggle WhatsApp for links, Drive for PDFs, Notion for notes, Discord for doubts, and a calendar for exams — information gets siloed and lost after the semester ends. NexusStudy consolidates all of it into one searchable hub.</p>
+            <div class="impact">Solves a real, self-observed workflow problem — not a tutorial clone</div>
+            <div class="tags"><span class="tag">JavaScript</span><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">MongoDB</span></div>
+            <div class="project-links"><a href="https://github.com/shoaibkhan-sde/NexusStudy" target="_blank" rel="noopener">Source →</a></div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-head"><span>VenueFlow-AI</span><span class="stars">★ 1</span></div>
+          <div class="project-body">
+            <h3>VenueFlow-AI</h3>
+            <p>A solution aimed at improving the physical event experience at large-scale sporting venues — addressing crowd movement, waiting times, and real-time coordination challenges for attendees.</p>
+            <div class="impact">Tackles a systems-level UX problem, not just a CRUD app</div>
+            <div class="tags"><span class="tag">JavaScript</span><span class="tag">AI-assisted</span></div>
+            <div class="project-links"><a href="https://github.com/shoaibkhan-sde/VenueFlow-AI" target="_blank" rel="noopener">Source →</a></div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-head"><span>CivicMind-AI</span><span class="stars">★ 1</span></div>
+          <div class="project-body">
+            <h3>CivicMind-AI</h3>
+            <p>An assistant that helps users understand the election process, timelines, and steps in an interactive, easy-to-follow way — civic-tech built for clarity over complexity.</p>
+            <div class="impact">Practical use of conversational AI for a real informational gap</div>
+            <div class="tags"><span class="tag">JavaScript</span><span class="tag">AI-assisted</span></div>
+            <div class="project-links"><a href="https://github.com/shoaibkhan-sde/CivicMind-AI" target="_blank" rel="noopener">Source →</a></div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-head"><span>SolarSystem</span><span class="stars">★ 1</span></div>
+          <div class="project-body">
+            <h3>SolarSystem</h3>
+            <p>An educational tool for kids to learn about the solar system through animation, paired with an AI chatbot to answer questions along the way.</p>
+            <div class="impact">Front-end animation work combined with a conversational learning layer</div>
+            <div class="tags"><span class="tag">JavaScript</span><span class="tag">Animation</span><span class="tag">AI Chatbot</span></div>
+            <div class="project-links"><a href="https://github.com/shoaibkhan-sde/SolarSystem" target="_blank" rel="noopener">Source →</a></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="eyebrow">experience.log</div>
+      <h2>git log --author="shoaib"</h2>
+      <div class="commit-log">
+
+        <div class="commit">
+          <div class="commit-meta"><span class="commit-hash">#pr7f3a2</span>Ongoing</div>
+          <div>
+            <div class="commit-title">Open Source Contributor</div>
+            <div class="commit-org">Community repositories on GitHub</div>
+            <ul class="commit-body">
+              <li>Earned GitHub's Pull Shark badge ×2 for merged pull requests</li>
+              <li>Earned the Pair Extraordinaire badge for collaborative PR work</li>
+              <li>30 public repositories, 19 stars earned across personal projects</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="commit">
+          <div class="commit-meta"><span class="commit-hash">#bd91c4e</span>2025 – Present</div>
+          <div>
+            <div class="commit-title">Independent Project Builder</div>
+            <div class="commit-org">Self-directed, MERN + AI-assisted tools</div>
+            <ul class="commit-body">
+              <li>Built NexusStudy, VenueFlow-AI, and CivicMind-AI — three full projects addressing real, self-identified problems</li>
+              <li>Practicing end-to-end ownership: frontend, backend, and database design</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="commit">
+          <div class="commit-meta"><span class="commit-hash">#9e02fa4</span>2025 – 2028 (Expected)</div>
+          <div>
+            <div class="commit-title">B.E., Computer Science &amp; Engineering</div>
+            <div class="commit-org">Padmashri Dr. V.B. Kolte College of Engineering</div>
+            <ul class="commit-body">
+              <li>Currently in 3rd year — coursework alongside self-driven DSA and MERN practice</li>
+              <li>Goal: 300+ DSA problems solved, strong SDE internship readiness</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="eyebrow">contact.sh</div>
+      <h2>Let's talk</h2>
+      <div class="contact-terminal">
+        <div class="cmd"><span class="prompt">$</span> ./contact.sh <span class="flag">--reach-out</span></div>
+        <div class="contact-links">
+          <a href="mailto:shoaib.cse.engineer@gmail.com"><span>Email</span><span>shoaib.cse.engineer@gmail.com</span></a>
+          <a href="https://github.com/shoaibkhan-sde" target="_blank" rel="noopener"><span>GitHub</span><span>github.com/shoaibkhan-sde</span></a>
+          <a href="https://linkedin.com/in/shoaibkhan-sde" target="_blank" rel="noopener"><span>LinkedIn</span><span>linkedin.com/in/shoaibkhan-sde</span></a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <span>© 2026 Shoaib Khan | Portfolio</span>
+      <span>Last updated: August 2026</span>
+    </footer>
+  </main>
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>
