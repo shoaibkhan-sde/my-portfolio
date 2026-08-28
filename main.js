@@ -31,4 +31,20 @@ document.addEventListener('DOMContentLoaded', () => {
   if (heroSection) {
     heroSection.classList.add('in');
   }
+
+  // Typewriter effect
+  const text = "SDE Aspirant — MERN Stack & DSA";
+  const typeElement = document.getElementById('typewriter');
+  let i = 0;
+  
+  function typeWriter() {
+    if (i < text.length) {
+      typeElement.innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typeWriter, 50); // Adjust typing speed here
+    }
+  }
+  
+  // Start typing slightly after the hero section fades in
+  setTimeout(typeWriter, 500);
 });
