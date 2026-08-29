@@ -32,19 +32,44 @@ document.addEventListener('DOMContentLoaded', () => {
     heroSection.classList.add('in');
   }
 
-  // Typewriter effect
-  const text = "SDE Aspirant — MERN Stack & DSA";
-  const typeElement = document.getElementById('typewriter');
-  let i = 0;
+  // Typewriter effect sequence
+  const cmdText = "whoami";
+  const roleText = "SDE Aspirant — MERN Stack & DSA";
   
-  function typeWriter() {
-    if (i < text.length) {
-      typeElement.textContent += text.charAt(i);
-      i++;
-      setTimeout(typeWriter, 50); // Adjust typing speed here
+  const typeCmd = document.getElementById('type-cmd');
+  const caretCmd = document.getElementById('caret-cmd');
+  const outName = document.getElementById('out-name');
+  const outRole = document.getElementById('out-role');
+  const typeRole = document.getElementById('typewriter');
+  
+  let iCmd = 0;
+  let iRole = 0;
+
+  function typeWriterCmd() {
+    if (iCmd < cmdText.length) {
+      typeCmd.textContent += cmdText.charAt(iCmd);
+      iCmd++;
+      setTimeout(typeWriterCmd, 120);
+    } else {
+      setTimeout(() => {
+        caretCmd.style.display = 'none';
+        outName.style.display = 'block';
+        setTimeout(() => {
+          outRole.style.display = 'block';
+          typeWriterRole();
+        }, 400);
+      }, 300);
+    }
+  }
+
+  function typeWriterRole() {
+    if (iRole < roleText.length) {
+      typeRole.textContent += roleText.charAt(iRole);
+      iRole++;
+      setTimeout(typeWriterRole, 50);
     }
   }
   
   // Start typing slightly after the hero section fades in
-  setTimeout(typeWriter, 500);
+  setTimeout(typeWriterCmd, 600);
 });

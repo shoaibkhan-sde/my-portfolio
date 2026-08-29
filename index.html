@@ -27,6 +27,7 @@
     <a class="tree-item" data-target="about" href="#about"><span class="icon">◆</span> about.md</a>
     <a class="tree-item" data-target="skills" href="#skills"><span class="icon">±</span> skills.diff</a>
     <a class="tree-item" data-target="projects" href="#projects"><span class="icon">▤</span> projects/</a>
+    <a class="tree-item" data-target="certifications" href="#certifications"><span class="icon">◇</span> certifications.json</a>
     <a class="tree-item" data-target="experience" href="#experience"><span class="icon">≣</span> experience.log</a>
     <a class="tree-item" data-target="contact" href="#contact"><span class="icon">›_</span> contact.sh</a>
 
@@ -43,9 +44,9 @@
           <span class="path">zsh — shoaib@portfolio ~ %</span>
         </div>
         <div class="terminal-body">
-          <div class="line"><span class="prompt">$</span> whoami</div>
-          <div class="out-name">Shoaib Khan</div>
-          <div class="out-role"><span id="typewriter"></span><span class="caret"></span></div>
+          <div class="line"><span class="prompt">$</span> <span id="type-cmd"></span><span class="caret" id="caret-cmd"></span></div>
+          <div class="out-name" id="out-name" style="display: none;">Shoaib Khan</div>
+          <div class="out-role" id="out-role" style="display: none;"><span id="typewriter"></span><span class="caret" id="caret-role"></span></div>
         </div>
       </div>
       <p class="hero-sub">3rd-year CSE student building full-stack products (React/Node.js) while grinding DSA and preparing for GATE CSE. I ship complete projects, participate in hackathons, and contribute to open source along the way.</p>
@@ -188,6 +189,67 @@
       </div>
     </section>
 
+    <section id="certifications">
+      <div class="eyebrow">certifications.json</div>
+      <h2>Credentials I've <span>earned</span></h2>
+      
+      <div class="cert-grid">
+
+        <div class="cert-card">
+          <div class="cert-card-top">
+            <span class="issuer-pill">Hack2skill</span>
+            <span class="cert-year">2026</span>
+          </div>
+          <div class="cert-title">PromptWars Challenge 1 — Top 50 Leaderboard</div>
+          <div class="cert-desc">Certificate of Merit for securing an official rank within the Top 50 Leaderboard during PromptWars Virtual Challenge 1.</div>
+          <div class="cert-footer">
+            <span class="cred-id">ID: 2026H2S04PWVCHL1-M100025</span>
+            <a class="verify-link" href="https://certificate.hack2skill.com/verify/2026H2S04PWVCHL1-M100025" target="_blank" rel="noopener">Verify</a>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-card-top">
+            <span class="issuer-pill">Hack2skill</span>
+            <span class="cert-year">2026</span>
+          </div>
+          <div class="cert-title">PromptWars Challenge 2 — Top 400 Leaderboard</div>
+          <div class="cert-desc">Certificate of Achievement for earning a definitive position within the Top 400 Leaderboard during Challenge 2.</div>
+          <div class="cert-footer">
+            <span class="cred-id">ID: 2026H2S05PWVCHL2-AT00295</span>
+            <a class="verify-link" href="https://certificate.hack2skill.com/verify/2026H2S05PWVCHL2-AT00295" target="_blank" rel="noopener">Verify</a>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-card-top">
+            <span class="issuer-pill">Hack2skill</span>
+            <span class="cert-year">2026</span>
+          </div>
+          <div class="cert-title">PromptWars Challenge 3</div>
+          <div class="cert-desc">Certificate of Appreciation for valuable contribution and successful submission of a verified Generative AI solution for Challenge 3.</div>
+          <div class="cert-footer">
+            <span class="cred-id">ID: 2026H2S06PWVCHL3-A00393</span>
+            <a class="verify-link" href="https://certificate.hack2skill.com/verify/2026H2S06PWVCHL3-A00393" target="_blank" rel="noopener">Verify</a>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-card-top">
+            <span class="issuer-pill">Hack2skill</span>
+            <span class="cert-year">2026</span>
+          </div>
+          <div class="cert-title">PromptWars Challenge 4 — Smart Stadiums</div>
+          <div class="cert-desc">Completion certificate for the Fanflow submission built during Hack2skill's Smart Stadiums &amp; Tournament Operations challenge.</div>
+          <div class="cert-footer">
+            <span class="cred-id">ID: 2026H2S07PWVCHL4-A00106</span>
+            <a class="verify-link" href="https://certificate.hack2skill.com/verify/2026H2S07PWVCHL4-A00106" target="_blank" rel="noopener">Verify</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
     <section id="experience">
       <div class="eyebrow">experience.log</div>
       <h2>git log --author="shoaib"</h2>
@@ -201,18 +263,6 @@
             <ul class="commit-body">
               <li><b>Eventra:</b> Fixed four bugs in desktop Navbar (spacing, logo overflow, duplicate active-state box, stray vertical divider); authored <a href="https://github.com/SandeepVashishtha/Eventra/pull/3061" target="_blank" style="color:var(--accent);">PR #3061</a> (merged).</li>
               <li><b>Rocket.Chat:</b> Maintain a public fork tracking upstream (develop) to prepare for contributions.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="commit">
-          <div class="commit-meta"><span class="commit-hash">#bd91c4e</span>2026</div>
-          <div>
-            <div class="commit-title">Hack2skill Certifications</div>
-            <div class="commit-org">PromptWars Challenges</div>
-            <ul class="commit-body">
-              <li><b>Challenge 4:</b> Smart Stadiums &amp; Tournament Operations (<a href="https://certificate.hack2skill.com/verify/2026H2S04PWVCHL1-M100025" target="_blank" style="color:var(--accent);">Verify</a>)</li>
-              <li><b>Challenge 3 &amp; 1:</b> High-scoring submissions for Atmos and VenueFlow AI platforms.</li>
             </ul>
           </div>
         </div>
