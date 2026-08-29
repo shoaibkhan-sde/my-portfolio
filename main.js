@@ -34,15 +34,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Typewriter effect sequence
   const cmdText = "whoami";
+  const nameText = "Shoaib Khan";
   const roleText = "SDE Aspirant — MERN Stack & DSA";
   
   const typeCmd = document.getElementById('type-cmd');
   const caretCmd = document.getElementById('caret-cmd');
   const outName = document.getElementById('out-name');
+  const typeName = document.getElementById('type-name');
+  const caretName = document.getElementById('caret-name');
   const outRole = document.getElementById('out-role');
   const typeRole = document.getElementById('typewriter');
   
   let iCmd = 0;
+  let iName = 0;
   let iRole = 0;
 
   function typeWriterCmd() {
@@ -54,10 +58,21 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => {
         caretCmd.style.display = 'none';
         outName.style.display = 'block';
-        setTimeout(() => {
-          outRole.style.display = 'block';
-          typeWriterRole();
-        }, 400);
+        setTimeout(typeWriterName, 200);
+      }, 300);
+    }
+  }
+
+  function typeWriterName() {
+    if (iName < nameText.length) {
+      typeName.textContent += nameText.charAt(iName);
+      iName++;
+      setTimeout(typeWriterName, 60);
+    } else {
+      setTimeout(() => {
+        caretName.style.display = 'none';
+        outRole.style.display = 'block';
+        setTimeout(typeWriterRole, 200);
       }, 300);
     }
   }
