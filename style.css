@@ -610,6 +610,14 @@ footer{
   transform:translateY(-5px);
   box-shadow: 0 20px 40px -12px rgba(0,0,0,0.7), 0 0 20px rgba(245,169,59,0.05);
 }
+.cert-img{
+  width:100%;
+  height:auto;
+  border-radius:8px;
+  border:1px solid var(--border);
+  object-fit:cover;
+  background: var(--bg-alt);
+}
 .cert-card-top{
   display:flex;
   justify-content:space-between;
