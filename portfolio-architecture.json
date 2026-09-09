@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Portfolio Static Delivery & Presentation Architecture",
+    "quality_profile": "showcase",
+    "viewBox": [1160, 580],
+    "views": [
+      {
+        "id": "deployment-pipeline",
+        "label": "CI/CD Deployment",
+        "focus": ["developer", "github-repo", "github-actions", "github-pages"],
+        "note": "Code pushed by developer triggers GitHub Actions workflow and publishes static bundle to GitHub Pages CDN."
+      },
+      {
+        "id": "visitor-serving",
+        "label": "Visitor & Edge Serving",
+        "focus": ["visitor", "github-pages", "html-dom"],
+        "note": "Visitors request portfolio via HTTPS; GitHub Pages delivers static HTML, CSS, and JS to client browser."
+      },
+      {
+        "id": "client-presentation",
+        "label": "Client Runtime Architecture",
+        "focus": ["html-dom", "terminal-theme", "interaction-controller", "static-assets"],
+        "note": "Semantic HTML structure styled by terminal CSS variables and animated with vanilla JavaScript."
+      }
+    ]
+  },
+  "components": [
+    { "id": "developer", "type": "external", "label": "Developer", "sublabel": "Local Git / Workspace", "pos": [50, 150], "size": [140, 64] },
+    { "id": "github-repo", "type": "backend", "label": "GitHub Repository", "sublabel": "main branch (Git VCS)", "brand": "github", "pos": [270, 150], "size": [150, 64] },
+    { "id": "github-actions", "type": "backend", "label": "GitHub Actions", "sublabel": "static.yml runner", "brand": "github-actions", "tag": "CI/CD", "pos": [500, 150], "size": [150, 64] },
+    { "id": "github-pages", "type": "cloud", "label": "GitHub Pages", "sublabel": "CDN Edge Hosting", "brand": "github", "tag": "HTTPS", "pos": [730, 150], "size": [150, 64] },
+    { "id": "visitor", "type": "external", "label": "Site Visitors", "sublabel": "Desktop & Mobile Browsers", "pos": [960, 150], "size": [140, 64] },
+    { "id": "terminal-theme", "type": "frontend", "label": "CSS Variables Theme", "sublabel": "Terminal Aesthetic & Fonts", "pos": [500, 300], "size": [150, 64] },
+    { "id": "html-dom", "type": "frontend", "label": "HTML5 Structure", "sublabel": "Semantic Layout & Hero", "pos": [730, 300], "size": [150, 64] },
+    { "id": "static-assets", "type": "cloud", "label": "Static Media", "sublabel": "Certificates & PDF Resume", "pos": [960, 300], "size": [140, 64] },
+    { "id": "interaction-controller", "type": "frontend", "label": "Interactive Scripts", "sublabel": "IntersectionObserver & Nav", "pos": [730, 440], "size": [150, 64] }
+  ],
+  "boundaries": [
+    { "kind": "region", "label": "GitHub Cloud Services", "wraps": ["github-repo", "github-actions", "github-pages"] },
+    { "kind": "security-group", "label": "Client Browser Presentation Layer", "wraps": ["terminal-theme", "html-dom", "static-assets", "interaction-controller"] }
+  ],
+  "connections": [
+    { "id": "dev-to-repo", "from": "developer", "to": "github-repo", "label": "git push", "variant": "emphasis", "labelDy": 24 },
+    { "id": "repo-to-actions", "from": "github-repo", "to": "github-actions", "label": "trigger", "labelDy": -24 },
+    { "id": "actions-to-pages", "from": "github-actions", "to": "github-pages", "label": "deploy", "labelDy": -24 },
+    { "id": "visitor-to-pages", "from": "visitor", "to": "github-pages", "label": "HTTPS", "variant": "emphasis", "labelDy": -24 },
+    { "id": "pages-to-dom", "from": "github-pages", "to": "html-dom", "label": "serves site", "variant": "emphasis", "labelAt": [850, 257] },
+    { "id": "dom-to-theme", "from": "html-dom", "to": "terminal-theme", "label": "applies CSS", "labelDy": 24 },
+    { "id": "dom-to-assets", "from": "html-dom", "to": "static-assets", "label": "embeds media", "labelDy": 24 },
+    { "id": "dom-to-controller", "from": "html-dom", "to": "interaction-controller", "label": "runs script", "labelAt": [850, 402] }
+  ],
+  "cards": [
+    { "dot": "cyan", "title": "Automated Deployment", "items": ["Pushing to main branch triggers static.yml workflow", "Deploys zero-build HTML/CSS/JS artifacts directly to GitHub Pages CDN"] },
+    { "dot": "emerald", "title": "Client Architecture", "items": ["Semantic HTML5 delivers dark terminal aesthetic", "CSS custom variables handle responsive theme and typography", "Vanilla JavaScript manages scroll reveals and navigation toggle"] },
+    { "dot": "amber", "title": "Zero Runtime Overhead", "items": ["No heavy frontend framework or backend database required", "Fast static edge caching ensures instant loading and high reliability"] }
+  ]
+}
