@@ -85,6 +85,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
   
+  // Dynamic Footer Date & Last Updated Month
+  const lastUpdatedEl = document.getElementById('last-updated');
+  if (lastUpdatedEl) {
+    const rawLastMod = document.lastModified;
+    const lastModDate = rawLastMod ? new Date(rawLastMod) : new Date();
+    if (!isNaN(lastModDate.getTime())) {
+      const month = lastModDate.toLocaleString('default', { month: 'long' });
+      const year = lastModDate.getFullYear();
+      lastUpdatedEl.textContent = `Last updated: ${month} ${year}`;
+    }
+  }
+
+  const currentYearEl = document.getElementById('current-year');
+  if (currentYearEl) {
+    currentYearEl.textContent = new Date().getFullYear();
+  }
+
   // Start typing slightly after the hero section fades in
   setTimeout(typeWriterCmd, 600);
 });
+
